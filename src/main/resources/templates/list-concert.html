@@ -12,13 +12,16 @@
     <ul>
         <li th:each="concert : ${concerts}">
             <a  th:href="@{/delete-concert/{id}(id=${concert.id})}">Delete</a>
-            <span th:text="${concert.title}"></span> 
+            <span th:text="${concert.title}"></span>
             <span th:text="${concert.performer}"></span>
             <span th:text="${concert.date}"></span>
             <span th:text="${concert.description}"></span>
         </li>
-    </ul>
+
     
+    </ul>
+    <a  th:href="@{/delete-concert}">Delete All Concerts</a>
+
     <!-- TODO: Add list of concerts -->
 </body>
 </html>
